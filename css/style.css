@@ -1,0 +1,351 @@
+* {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+/* .ubuntu-mono-regular {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.ubuntu-mono-bold {
+font-family: "Ubuntu Mono", monospace;
+font-weight: 700;
+font-style: normal;
+}
+
+.ubuntu-mono-regular-italic {
+font-family: "Ubuntu Mono", monospace;
+font-weight: 400;
+font-style: italic;
+}
+
+.ubuntu-mono-bold-italic {
+font-family: "Ubuntu Mono", monospace;
+font-weight: 700;
+font-style: italic;
+} */
+
+body {
+  background: #dad8d8f3;
+}
+
+.logo {
+  margin: 20px 0 0;
+  width: 40%;
+}
+
+.seccion-ingreso-texto {
+  width: 52%;
+  height: 90vh;
+  display: inline-block;
+  vertical-align: top;
+  right: -120px;
+}
+
+.div-encriptado {
+  width: 98%;
+  margin: 40px 0 0px;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-encriptado {
+  padding: 5px;
+  margin: 5px 5px;
+  width: 90%;
+  height: 90%;
+  vertical-align: middle;
+  border-radius: 10px;
+  resize: none;
+  background: #fffffff3;
+  color: #0a3871;
+  outline: none;
+  text-transform: lowercase;
+  border: none;
+}
+
+.texto-encriptado::placeholder {
+  color: #0a3871;
+}
+
+.requisito-texto {
+  font-style: italic;
+  text-align: left;
+  padding-left: 5px;
+  font-size: 22px;
+}
+
+.btn {
+  text-align: left;
+  margin: 5% 0 0;
+}
+
+.botonEncriptar:hover,
+.botonDesencriptar:hover {
+  transform: scale(1.05);
+}
+
+.botonEncriptar {
+  background: #0a3871;
+  color: white;
+  font-size: 22px;
+  height: 67px;
+  width: 328px;
+  border-radius: 30px;
+  border: none;
+  margin: 0px 20px 10px 0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.botonDesencriptar {
+  background: #d8dfe8;
+  color: #0a3871;
+  font-size: 22px;
+  height: 67px;
+  width: 328px;
+  border-radius: 30px;
+  border: 1px solid #0a3871;
+  vertical-align: top;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.seccion-desencriptado {
+  margin: 20px 7%;
+  width: 30%;
+  height: 90vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: white;
+  border-radius: 30px;
+}
+
+.texto-mensaje {
+  color: #0a3871;
+  padding: 20px;
+  width: 98%;
+  height: 88%;
+  border-radius: 30px;
+  vertical-align: top;
+  border: none;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+  background-image: url("../img/inspector-gadget.png");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+}
+
+.texto-mensaje::placeholder {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+}
+
+.div-boton-copiar {
+  text-align: center;
+  margin-top: 4%;
+}
+
+.botonCopiar:hover {
+  transform: scale(1.1);
+}
+
+.botonCopiar {
+  display: none;
+  font-size: 22px;
+  width: 60%;
+  height: 7vh;
+  border-radius: 30px;
+  border: 1px solid #0a3871;
+  color: #0a3871;
+  background: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#advertencia {
+  text-align: center;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 5px 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#cerrar-boton:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
+#cerrar-boton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-align: left;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* -----------------   MEDIAS QUERIES  -------------- */
+
+@media screen and (max-width: 1325px) {
+  .btn {
+    text-align: center;
+  }
+
+  .botonEncriptar {
+    margin: 0 0 10px 0;
+  }
+
+  .botonDesencriptar {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .seccion-ingreso-texto {
+    right: -30px;
+  }
+
+  .seccion-desencriptado {
+    width: 40%;
+    margin: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    padding: 10px;
+  }
+
+  .seccion-ingreso-texto {
+    width: 52%;
+    height: 90vh;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    right: -120px;
+  }
+
+  .div-encriptado {
+    height: 40%;
+  }
+
+  .btn {
+    margin: 1% 0 0;
+  }
+
+  .botonEncriptar,
+  .botonDesencriptar {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+  }
+
+  .botonCopiar {
+    height: 45px;
+  }
+
+  .seccion-desencriptado {
+    height: 10vh;
+    position: relative;
+    margin: auto;
+  }
+
+  .texto-mensaje::placeholder {
+    right: 50px;
+  }
+
+  .texto-mensaje {
+    height: 78%;
+    background-image: none;
+    font-size: 1.2rem;
+  }
+
+  .div-boton-copiar {
+    margin-top: 0;
+  }
+
+  #cerrar-boton:hover {
+    transform: scale(1.2);
+    font-weight: bold;
+  }
+
+  #cerrar-boton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #advertencia {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  * {
+    font-size: 1.2em;
+  }
+
+  .logo {
+    margin: 10px 0 0;
+    width: auto;
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    padding: 10px;
+  }
+
+  .seccion-ingreso-texto {
+    right: auto;
+  }
+
+  .botonDesencriptar,
+  .botonEncriptar {
+    margin-top: 0px;
+  }
+
+  .seccion-desencriptado {
+    right: auto;
+    margin: 0 5%;
+    top: 55px;
+  }
+
+  .texto-mensaje::placeholder {
+    right: 0px;
+    top: 10px;
+  }
+
+  .botonCopiar {
+    width: 300px;
+  }
+
+  @media screen and (min-height: 900px) {
+  }
+}

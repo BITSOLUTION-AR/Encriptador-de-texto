@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="logo"><img src="img/logo.png" alt="Alura Latam"></header>
+
+    <main class="main">
+        <section class="seccion-ingreso-texto">
+            <div class="div-encriptado">
+                <textarea class="texto-encriptado" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+
+                <h6 class="requisito-texto">Solo se admiten letras minúsculas y sin acentos</h6>
+
+            <div class="btn">
+                <button class="botonEncriptar" onclick="botonEncriptar()">Encriptar</button>
+                <button class="botonDesencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="seccion-desencriptado">
+            <textarea class="texto-mensaje" disabled placeholder="Ningun mensaje fue encontrado"></textarea>
+            <div id="advertencia" class="oculto">
+                <p><img src="/img/icno-advertencia.png" alt="icono de advertencia" width="80px" height="80px"><br>Ingrese un texto!<br></p>
+                <button id="cerrar-boton" onclick="cerrarAdvertencia()">X</button>
+              </div>
+            <div class="div-boton-copiar">
+                <button class="botonCopiar" onclick="copiar()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>Desarrollado por Bitsolution-AR</footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
